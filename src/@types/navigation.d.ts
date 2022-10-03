@@ -4,6 +4,7 @@ export declare global {
       groups: undefined;
       new: undefined;
       home: undefined;
+      statistics: undefined;
       players: {
         group: string;
       }

@@ -4,6 +4,7 @@ import { Groups } from '@screens/Groups';
 import { Players } from '@screens/Players';
 import { NewGroup } from '@screens/NewGroup';
 import { Home } from '@screens/Home';
+import { Statistics } from '@screens/Statistics';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -11,8 +12,13 @@ export function AppRoutes(){
   return(
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen 
-        name="homoe"
+        name="home"
         component={Home}
+      />
+
+      <Screen
+        name="statistics"
+        component={Statistics}
       />
 
       <Screen 

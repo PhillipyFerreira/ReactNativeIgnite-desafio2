@@ -1,6 +1,12 @@
 import styled from "styled-components/native";
 import { CaretLeft } from "phosphor-react-native";
 
+export type HeaderThemeProps = 'GREEN_THEME' | 'RED_THEME';
+
+type Props = {
+  type: HeaderThemeProps;
+}
+
 export const Container = styled.View`
   width: 100%;
 
@@ -27,7 +33,8 @@ export const BackButton = styled.TouchableOpacity`
   flex: 1;
 `;
 
-export const BackIcon = styled(CaretLeft).attrs(({ theme }) => ({
+export const BackIcon = styled(CaretLeft).attrs(({ theme}) => ({
   size: 36,
   color: theme.COLORS.GREEN_DARK
+  // color: ${({ theme, type }) => type === 'PRIMARY' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK};
 }))``;

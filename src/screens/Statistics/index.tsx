@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
 import {FlatList, Text} from 'react-native';
 
 import { Container, HeaderList } from './styles';
@@ -10,7 +8,7 @@ import { Button } from '@components/Button';
 import { DietList, DietElement} from'@components/DietList'; 
 
 const dataTest = [{
-        name: "Teste name",
+        name: "Tela de estatistica",
         description: "Teste descripton",
         date: "Teste de data",
         hour: "20:00",
@@ -23,17 +21,11 @@ const dataTest = [{
         hour: "16:00",
         acceptInDiet: false
     }];
-export function Home() {
-
-    const navigation = useNavigation();
-
-    async function goToNavigate(){
-        navigation.navigate('statistics');
-    }
+export function Statistics() {
     return(
         <Container>
             <Header/> 
-            <GroupCard onPress={goToNavigate} />
+            <GroupCard />
             <Text> Refeições </Text>
             <Button title='+  Nova refeição'/>
 
